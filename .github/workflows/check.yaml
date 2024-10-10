@@ -6,6 +6,7 @@ on:
       - '*' # This triggers on any branch
     paths:
       - 'base/*/*'  # Only include YAML files from this specific path
+      - 'apps/*'
   
   pull_request:
     branches:
@@ -29,4 +30,4 @@ jobs:
     # Validate only the files inside directory
     - name: Validate YAML files in specific path
       run: |
-        yamllint base/*/*
+        yamllint base/*/* & apps/* &
