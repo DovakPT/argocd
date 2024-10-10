@@ -30,4 +30,4 @@ jobs:
     # Validate only the files inside directory
     - name: Validate YAML files in specific path
       run: |
-        yamllint base/*/* || apps/*
+        yamllint base/*/*; apps/*
